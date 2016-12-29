@@ -20,7 +20,17 @@ public class ModBlocks {
 			block.setRegistryName(name);
 
 		GameRegistry.register(block);
-		GameRegistry.register(new ItemBlock(block).setRegistryName(name));
+		GameRegistry.register(new ItemBlock(block){
+			@Override
+			public boolean getHasSubtypes() {
+				return true;
+			}
+
+			@Override
+			public int getMetadata(int damage) {
+				return damage;
+			}
+		}.setRegistryName(name));
 		Brainpower.proxy.tryHandleBlockModel(block, name);
 		return block;
 	}

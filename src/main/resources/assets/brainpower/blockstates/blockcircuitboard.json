@@ -1,6 +1,22 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {},
+    "model": "cube_all",
+    "uvlock": true
+  },
   "variants": {
-    "tier=basic": { "model": "brainpower:blockcircuitboard" },
-    "tier=advanced": { "model": "brainpower:blockcircuitboard" }
+    "tier": {
+      "basic": {
+        "textures": {
+          "all": "brainpower:blocks/blockcircuitboard"
+        }
+      },
+      "advanced": {
+        "textures": {
+          "all": "brainpower:blocks/blockcircuitboardadvanced"
+        }
+      }
+    }
   }
 }

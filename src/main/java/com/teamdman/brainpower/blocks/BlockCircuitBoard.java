@@ -9,13 +9,20 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,13 +85,14 @@ public class BlockCircuitBoard extends Block implements IVariantProvider {
 		public String toString() {
 			return getName();
 		}
+
 	}
 
 	@Override
 	public List<Pair<Integer, String>> getVariants() {
 		List<Pair<Integer, String>> ret = new ArrayList<>();
 		ret.add(new ImmutablePair<>(0, "tier=basic"));
-		ret.add(new ImmutablePair<>(0, "tier=advanced"));
+		ret.add(new ImmutablePair<>(1, "tier=advanced"));
 		return ret;
 	}
 }
