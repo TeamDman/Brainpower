@@ -1,0 +1,16 @@
+[
+{
+  "modid": "brainpower",
+  "name": "Brainpower",
+  "description": "A minecraft implementation of Brainfuck.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TeamDman"],
+  "credits": "AWayOfTime for his rendering shenanigans",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

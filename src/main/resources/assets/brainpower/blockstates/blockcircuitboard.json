@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "tier=basic": { "model": "brainpower:blockcircuitboard" },
+    "tier=advanced": { "model": "brainpower:blockcircuitboard" }
+  }
+}
