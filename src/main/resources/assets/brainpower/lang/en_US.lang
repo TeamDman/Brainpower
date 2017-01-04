@@ -1,2 +1,9 @@
 itemGroup.brainpower=Brainpower
 tile.blockcircuitboard.name=Circuitboard
+tile.blockplus.name=Plus
+tile.blockminus.name=Minus
+tile.blockarrow.name=Arrow
+tile.blockbracket.name=Bracket
+tile.blockperiod.name=Period
+tile.blockcomma.name=Comma
+tile.blockcircle.name=Circle

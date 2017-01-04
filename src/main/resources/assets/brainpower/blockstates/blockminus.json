@@ -1,12 +1,15 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "textures": {"texture": "brainpower:blocks/arrow"},
+    "textures": {"texture": "brainpower:blocks/minus"},
     "model": "brainpower:plate",
     "uvlock": false
   },
   "variants": {
+
     "facing": {
+      "up": {},
+      "down": {},
       "north": {
         "y": 270
       },

@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "textures": {"texture": "brainpower:blocks/arrow"},
+    "textures": {"texture": "brainpower:blocks/circle"},
     "model": "brainpower:plate",
     "uvlock": false
   },

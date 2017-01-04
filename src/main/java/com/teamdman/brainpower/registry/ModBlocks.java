@@ -11,13 +11,24 @@ public class ModBlocks {
 	public static Block CIRCUITBOARD;
 	public static Block ARROW;
 	public static Block PLUS;
+	public static Block MINUS;
+	public static Block PERIOD;
+	public static Block COMMA;
+	public static Block BRACKET;
+	public static Block CIRCLE;
+
 	public static void init() {
 		CIRCUITBOARD = registerBlock(new BlockCircuitBoard(), "blockcircuitboard");
 		ARROW = registerBlock(new BlockCharacter(),"blockarrow");
 		PLUS = registerBlock(new BlockCharacter(),"blockplus");
+		MINUS = registerBlock(new BlockCharacter(),"blockminus");
+		PERIOD = registerBlock(new BlockCharacter(),"blockperiod");
+		COMMA = registerBlock(new BlockCharacter(),"blockcomma");
+		BRACKET = registerBlock(new BlockCharacter(),"blockbracket");
+		CIRCLE = registerBlock(new BlockCharacter(),"blockcircle");
 	}
 
-	private static Block registerBlock(Block block, String name) {
+	private static Block registerBlock(Block block, String name,ItemBlock itemblock) {
 		block.setUnlocalizedName(name);
 		block.setCreativeTab(Brainpower.tab);
 
@@ -25,7 +36,13 @@ public class ModBlocks {
 			block.setRegistryName(name);
 
 		GameRegistry.register(block);
-		GameRegistry.register(new ItemBlock(block){
+		GameRegistry.register(itemblock);
+		Brainpower.proxy.tryHandleBlockModel(block, name);
+		return block;
+	}
+
+	private static Block registerBlock(Block block, String name) {
+		ItemBlock itemblock = new ItemBlock(block){
 			@Override
 			public boolean getHasSubtypes() {
 				return true;
@@ -35,8 +52,8 @@ public class ModBlocks {
 			public int getMetadata(int damage) {
 				return damage;
 			}
-		}.setRegistryName(name));
-		Brainpower.proxy.tryHandleBlockModel(block, name);
-		return block;
+		};
+		itemblock.setRegistryName(name);
+		return registerBlock(block,name,itemblock);
 	}
 }
