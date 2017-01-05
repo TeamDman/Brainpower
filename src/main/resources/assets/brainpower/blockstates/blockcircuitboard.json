@@ -9,12 +9,12 @@
     "tier": {
       "basic": {
         "textures": {
-          "all": "brainpower:blocks/blockcircuitboard"
+          "all": "brainpower:blocks/circuitboard_basic"
         }
       },
       "advanced": {
         "textures": {
-          "all": "brainpower:blocks/blockcircuitboardadvanced"
+          "all": "brainpower:blocks/circuitboard_advanced"
         }
       }
     }

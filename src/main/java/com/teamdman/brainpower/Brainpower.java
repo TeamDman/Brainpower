@@ -3,6 +3,7 @@ package com.teamdman.brainpower;
 import com.teamdman.brainpower.netty.MessageChangeCharacter;
 import com.teamdman.brainpower.proxy.CommonProxy;
 import com.teamdman.brainpower.registry.ModBlocks;
+import com.teamdman.brainpower.registry.ModTiles;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -37,6 +38,7 @@ public class Brainpower {
 		network = NetworkRegistry.INSTANCE.newSimpleChannel("changechar");
 		network.registerMessage(MessageChangeCharacter.Handler.class,MessageChangeCharacter.class,0, Side.SERVER);
 		ModBlocks.init();
+		ModTiles.init();
 	}
 
 	@EventHandler
@@ -48,4 +50,7 @@ public class Brainpower {
 	public void postinit(FMLPostInitializationEvent event) {
 
 	}
+
+	//TODO: Make characters able to overwrite one another
+	//TODO: Increase character icon clarity
 }

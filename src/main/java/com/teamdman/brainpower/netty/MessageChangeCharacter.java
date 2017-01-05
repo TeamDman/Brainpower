@@ -44,7 +44,6 @@ public class MessageChangeCharacter implements IMessage {
 			mainThread.addScheduledTask(new Runnable() {
 				@Override
 				public void run() {
-					System.out.println("OH BOI");
 					EntityPlayer player = ctx.getServerHandler().playerEntity;
 					BlockCharacter.EnumCharacter heldChar = BlockCharacter.EnumCharacter.getFromBlock(((ItemBlock) player.getHeldItemMainhand().getItem()).getBlock());
 					int size = player.getHeldItemMainhand().stackSize;
